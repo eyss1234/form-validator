@@ -1,4 +1,15 @@
 const form = document.getElementById('form');
 const password1El = document.getElementById('password1');
-const password2El = document.querySelector('password2')
-const messageContainer
+const password2El = document.getElementById('password2')
+const messageContainer = document.querySelector('.message-container');
+const message = document.getElementById('message');
+
+// Submit event
+function processFormData(e) {
+  e.preventDefault();
+  console.log(e);
+
+}
+
+// Event Listener
+form.addEventListener('submit', processFormData);
