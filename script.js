@@ -38,12 +38,27 @@ function validateForm() {
    }
 }
 
+function storeFormData() {
+  const user = {
+    name: form.name.value,
+    phone: form.phone.value,
+    email: form.email.value,
+    website: form.website.value,
+    password: form.password.value
+  }
+  // do something with user data
+  console.log(user);
+}
 
 // Submit event
 function processFormData(e) {
   e.preventDefault();
   // Validate form
   validateForm();
+  // submit data is valid
+  if (isValid && passwordsMatch) {
+    storeFormData();
+  }
 }
 
 // Event Listener
